@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Sinami demo';
+  src: url('/fuentes/Sinami demo.ttf'), format('truetye');
+}
+
+@font-face {
+  font-family: 'Cream Cake';
+  src: url('/fuentes/Cream Cake.otf'), format('opentypeáaa');
+}
+
+@font-face {
+  font-family: 'Hand of Jun';
+  src: url('/fuentes/Hand of Jun.otf'), format('opentype');
+}
+
+@font-face {
+  font-family: 'LearningCurve';
+  src: url('/fuentes/LearningCurve.ttf'), format('truetye');
+}
+
+@font-face {
+  font-family: 'LearningCurveDashed';
+  src: url('/fuentes/LearningCurveDashed.ttf'), format('truetye');
+}
+
+@font-face {
+  font-family: 'Real World';
+  src: url('/fuentes/Real World.otf'), format('truetye');
+}
+
+body {
+  
+  background: #545454;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  
+  
+}
+
+/*
+#lateral {
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    background: darkgrey;
+    border: 1px solid white;
+    left: 0;
+    top: 0;
+    display: none;
+    transition: display 0.1s ease;
+}
+*/
+#lateral {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  background: darkgrey;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* Ajusta la duración para hacer la animación más lenta */
+}
+
+#lateral.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lateral.show {
+  display: block;
+}
+
+#header_lateral {
+  background: black;
+  height: 70px;
+  
+}
+
+.nombre {
+  
+  color: gold;
+  font-size: .7rem;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+.app {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 33px;
+  background: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.funciones {
+  color: orange;
+}
+
+.ejemplo {
+  color: greenyellow;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#h3 {
+  background: #424445;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: right;
+}
+
+.pantalla {
+  background: #343434;
+  border: 1px solid lightgrey;
+  width: 99%;
+  box-sizing: border-box;
+  height: 90vh;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  
+  animation: fadeIn 1s ease-in-out;
+}
+
+#titulo,
+#concepto,
+#ejemplo {
+  color: white;
+}
+
+#titulo {
+  background: #252C30;
+  box-sizing: border-box;
+  margin: 3px;
+  font-weight: normal;
+  padding: 5px;
+  font-family: "Cream Cake", sans-serif;
+  font-size: 1.5em;
+  color: #00C9FF;
+}
+
+#concepto {
+  background: #2C4142;
+  text-align: justify;
+  box-sizing: border-box;
+  margin: 3px;
+  padding: 5px;
+  font-family: 'Cream Cake', Times, serif;
+  color: #C3AEE0;
+  font-size: 1.5em;
+}
+
+#ejemplo {
+  background: black;
+  font-weight: bold;
+  box-sizing: border-box;
+  margin: 3px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: -1px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 1.2em;
+  color: #FF0000;
+  
+}
+
+
+#span_titulo {
+  color: greenyellow;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: .6em;
+}
+
+#span_titulo::before {
+  content: ": ";
+  color: white;
+  
+}
+
+#span_concepto {
+  color: lime;
+  font-weight: normal;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: .5em;
+  
+}
+
+#span_ejemplo {
+  color: white;
+  font-weight: normal;
+  font-size: .8em;
+}
+
+/*
+#allbotones,
+#otros_botones {
+  background: #34353B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 5px 5px 5px;
+  padding: 3px 3px 3px 3px;
+  height: 50vw;
+  overflow: auto;
+}
+
+#botones {
+  width: 98%;
+  margin: 2.5px auto 2.5px auto;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: #34353B;
+  font-size: .6em;
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+
+}
+
+#botones::before {
+  content: "Funcion";
+  color: blue;
+  font-family: 'Cream Cake', sans-serif;
+  font-size: 1.4em;
+}
+
+#titulo_fun_esp,
+#otrasFunciones {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid black;
+  padding: 5px 0 0 0;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ul {
+  text-align: left;
+  margin-top: 10px;
+}
+*/
+#allbotones
+ {
+  background: #34353B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  max-height: 50vh;
+  /* Ajusta la altura máxima */
+}
+
+#botones {
+  width: 95%;
+  margin: 5px auto;
+  height: 40px;
+  /* Aumentamos la altura */
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, #444, #333);
+  /* Degradado moderno */
+  color: greenyellow;
+  font-size: 0.8em;
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Transición suave */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#botones::before {
+  content: "Funcion";
+  color: #00bcd4;
+  /* Color cian moderno */
+  font-family: 'Cream Cake', sans-serif;
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+#botones:hover {
+  background: linear-gradient(145deg, #555, #444);
+  /* Cambio de color al hacer hover */
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  /* Efecto de levitación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#botones:active {
+  transform: translateY(0);
+  /* Efecto de clic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de borde animado */
+#botones::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+#botones:hover::after {
+  left: 100%;
+}
+
+/* Estilo para el texto dentro del botón */
+#botones span {
+  color: white;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.button_left {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  position: absolute;
+  top: 70%;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  outline: none;
+  opacity: 30%;
+  backdrop-filter: blur(1px);
+
+}
+
+.button_right {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 5px;
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  outline: none;
+  opacity: 30%;
+  filter: invert(1);
+  backdrop-filter: blur(1px);
+
+
+}
+.button_left:hover, .button_right:hover{
+  filter: invert(70%);
+  opacity: 1;
+
+
+}
+
+#otros_funciones_categorizados{
+  background: black;
+  overflow: auto;
+  height: 200px;
+}
+
+.botones-container {
+  width: 95%;
+  margin: 5px auto;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, #444, #333); /* Degradado moderno */
+  color: greenyellow;
+  font-size: 0.8em;
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: auto;
+}
+
+#botones::before,
+.botones-container button::before {
+  content: "Funcion";
+  color: #00bcd4; /* Color cian moderno */
+  font-family: 'Cream Cake', sans-serif;
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+#botones:hover,
+.botones-container button:hover {
+  background: linear-gradient(145deg, #555, #444); /* Cambio de color al hacer hover */
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px); /* Efecto de levitación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#botones:active,
+.botones-container button:active {
+  transform: translateY(0); /* Efecto de clic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#botones::after,
+.botones-container button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+#botones:hover::after,
+.botones-container button:hover::after {
+  left: 100%;
+}
+
+#botones span,
+.botones-container button span {
+  color: white;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-left: 10px;
+}
+

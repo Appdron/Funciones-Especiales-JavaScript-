@@ -1,0 +1,19 @@
+Estos caracteres de escape se utilizan para representar caracteres especiales dentro de cadenas de texto en JavaScript y son útiles para formatear texto o incluir caracteres que de otra manera serían difíciles de representar en una cadena.
+
+
+
+home
+logo-codepen
+logo-css3
+logo-github
+logo-html5
+logo-ionic
+logo-javascript
+logo-nodejs
+logo-python
+logo-react
+logo-stackoverflow
+logo-tux
+logo-wechat
+logo-whatsapp
+settings

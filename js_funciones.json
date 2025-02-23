@@ -1,0 +1,409 @@
+{
+  "funciones": [
+    {
+      "titulo": "Declaración de variables",
+      "concepto": "En JavaScript, las variables se pueden declarar usando 'var', 'let' o 'const'. 'var' tiene un alcance de función, mientras que 'let' y 'const' tienen un alcance de bloque.",
+      "ejemplo": "let nombre = 'Juan'; const edad = 30;",
+      "categoria": "Variables"
+    },
+    {
+      "titulo": "Funciones",
+      "concepto": "Las funciones son bloques de código que se pueden ejecutar y reutilizar. Se definen con la palabra clave 'function' y pueden tener parámetros.",
+      "ejemplo": "function saludar(nombre) { console.log('Hola, ' + nombre); } saludar('Juan');",
+      "categoria": "Funciones"
+    },
+    {
+      "titulo": "Arrow Functions",
+      "concepto": "Las arrow functions son una forma concisa de escribir funciones. Usan la sintaxis '() => { }' y no tienen su propio contexto 'this'.",
+      "ejemplo": "const sumar = (a, b) => a + b; console.log(sumar(2, 3));",
+      "categoria": "Funciones"
+    },
+    {
+      "titulo": "Condicionales",
+      "concepto": "Las estructuras condicionales permiten ejecutar diferentes bloques de código basados en condiciones. 'if', 'else', y 'else if' son comunes.",
+      "ejemplo": "let edad = 18; if (edad >= 18) { console.log('Eres adulto'); } else { console.log('Eres menor de edad'); }",
+      "categoria": "Estructuras de Control"
+    },
+    {
+      "titulo": "Switch",
+      "concepto": "El 'switch' es una estructura de control que se utiliza para ejecutar diferentes bloques de código según el valor de una expresión.",
+      "ejemplo": "let dia = 3; switch(dia) { case 1: console.log('Lunes'); break; case 2: console.log('Martes'); break; default: console.log('Día desconocido'); }",
+      "categoria": "Estructuras de Control"
+    },
+    {
+      "titulo": "Operadores lógicos",
+      "concepto": "Los operadores lógicos permiten realizar operaciones entre expresiones booleanas. Los operadores más comunes son '&&' (AND), '||' (OR), y '!' (NOT).",
+      "ejemplo": "let a = true; let b = false; console.log(a && b); // false",
+      "categoria": "Operadores"
+    },
+    {
+      "titulo": "Operadores de comparación",
+      "concepto": "Los operadores de comparación se utilizan para comparar dos valores. Los más comunes son '==', '===', '>', '<', '>=', y '<='.",
+      "ejemplo": "let a = 5; let b = 10; console.log(a < b); // true",
+      "categoria": "Operadores"
+    },
+    {
+      "titulo": "Arrays",
+      "concepto": "Un array es una lista de valores. En JavaScript, los arrays son objetos que permiten almacenar múltiples valores en una sola variable.",
+      "ejemplo": "let frutas = ['manzana', 'banana', 'cereza']; console.log(frutas[1]); // banana",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "Métodos de Arrays",
+      "concepto": "Los arrays en JavaScript tienen varios métodos útiles como 'map()', 'filter()', 'reduce()', entre otros.",
+      "ejemplo": "let numeros = [1, 2, 3]; let resultado = numeros.map(x => x * 2); console.log(resultado); // [2, 4, 6]",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "Objetos",
+      "concepto": "Los objetos son colecciones de propiedades y valores. Las propiedades se definen mediante una clave y un valor.",
+      "ejemplo": "let persona = { nombre: 'Juan', edad: 30 }; console.log(persona.nombre); // Juan",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "Desestructuración de Objetos",
+      "concepto": "La desestructuración de objetos permite extraer valores de objetos y asignarlos a variables con una sintaxis más compacta.",
+      "ejemplo": "let persona = { nombre: 'Juan', edad: 30 }; let { nombre, edad } = persona; console.log(nombre); // Juan",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "Funciones Asíncronas (Async/Await)",
+      "concepto": "Las funciones asíncronas permiten manejar operaciones asíncronas de forma más legible. 'await' se usa dentro de una función asíncrona para esperar a que una promesa se resuelva.",
+      "ejemplo": "async function obtenerDatos() { let respuesta = await fetch('https://api.example.com'); let data = await respuesta.json(); console.log(data); }",
+      "categoria": "Funciones Avanzadas"
+    },
+    {
+      "titulo": "Promises",
+      "concepto": "Las promesas son objetos que representan la terminación o el fracaso de una operación asíncrona. Permiten manejar la ejecución de operaciones de manera más controlada.",
+      "ejemplo": "let promesa = new Promise((resolve, reject) => { setTimeout(() => resolve('Éxito'), 1000); }); promesa.then((resultado) => console.log(resultado));",
+      "categoria": "Funciones Avanzadas"
+    },
+    {
+      "titulo": "Clases",
+      "concepto": "Las clases en JavaScript son plantillas para crear objetos. Introducidas en ECMAScript 6, permiten crear instancias de objetos con un conjunto de métodos y propiedades.",
+      "ejemplo": "class Persona { constructor(nombre, edad) { this.nombre = nombre; this.edad = edad; } saludar() { console.log('Hola, ' + this.nombre); } } const juan = new Persona('Juan', 30); juan.saludar();",
+      "categoria": "Programación Orientada a Objetos"
+    },
+    {
+      "titulo": "Herencia en Clases",
+      "concepto": "La herencia permite a una clase heredar propiedades y métodos de otra clase, lo que facilita la reutilización de código.",
+      "ejemplo": "class Estudiante extends Persona { constructor(nombre, edad, grado) { super(nombre, edad); this.grado = grado; } saludar() { console.log('Hola, soy ' + this.nombre + ' y estoy en el grado ' + this.grado); } }",
+      "categoria": "Programación Orientada a Objetos"
+    },
+    {
+      "titulo": "Módulos",
+      "concepto": "Los módulos permiten dividir el código JavaScript en archivos separados, exportando e importando funciones, objetos y valores entre ellos.",
+      "ejemplo": "En archivo 'utils.js': export const suma = (a, b) => a + b; En archivo 'main.js': import { suma } from './utils.js';",
+      "categoria": "Organización del Código"
+    },
+    {
+      "titulo": "Eventos",
+      "concepto": "Los eventos permiten interactuar con el usuario o con el sistema. Pueden ser de tipo 'click', 'keydown', 'submit', entre otros.",
+      "ejemplo": "document.getElementById('miBoton').addEventListener('click', function() { alert('¡Hola!'); });",
+      "categoria": "Interactividad"
+    },
+    {
+      "titulo": "Manipulación del DOM",
+      "concepto": "El DOM (Document Object Model) es una representación del documento HTML. JavaScript puede interactuar con el DOM para modificar la estructura de la página.",
+      "ejemplo": "document.getElementById('miElemento').innerHTML = 'Nuevo contenido';",
+      "categoria": "Interactividad"
+    },
+    {
+      "titulo": "Map",
+      "concepto": "El método 'map()' crea un nuevo array con los resultados de la ejecución de una función sobre cada elemento de un array.",
+      "ejemplo": "let numeros = [1, 2, 3]; let resultados = numeros.map(x => x * 2); console.log(resultados); // [2, 4, 6]",
+      "categoria": "Métodos de Arrays"
+    },
+    {
+      "titulo": "Filter",
+      "concepto": "El método 'filter()' crea un nuevo array con todos los elementos que pasen la prueba implementada por la función proporcionada.",
+      "ejemplo": "let numeros = [1, 2, 3, 4, 5]; let resultados = numeros.filter(x => x > 2); console.log(resultados); // [3, 4, 5]",
+      "categoria": "Métodos de Arrays"
+    },
+    {
+      "titulo": "Reduce",
+      "concepto": "El método 'reduce()' aplica una función contra un acumulador y cada elemento de un array (de izquierda a derecha) para reducirlo a un solo valor.",
+      "ejemplo": "let numeros = [1, 2, 3]; let total = numeros.reduce((acumulador, valor) => acumulador + valor, 0); console.log(total); // 6",
+      "categoria": "Métodos de Arrays"
+    },
+    {
+      "titulo": "ForEach",
+      "concepto": "El método 'forEach()' ejecuta una función en cada elemento de un array, sin retornar un valor.",
+      "ejemplo": "let numeros = [1, 2, 3]; numeros.forEach(x => console.log(x)); // 1, 2, 3",
+      "categoria": "Métodos de Arrays"
+    },
+    {
+      "titulo": "Spread Operator",
+      "concepto": "El operador de propagación '...' permite descomponer un array u objeto en elementos individuales.",
+      "ejemplo": "let numeros = [1, 2, 3]; let nuevosNumeros = [...numeros, 4, 5]; console.log(nuevosNumeros); // [1, 2, 3, 4, 5]",
+      "categoria": "Operadores"
+    },
+    {
+      "titulo": "Rest Parameters",
+      "concepto": "Los parámetros rest '...' permiten representar un número variable de argumentos como un array.",
+      "ejemplo": "function sumar(...numeros) { return numeros.reduce((a, b) => a + b, 0); } console.log(sumar(1, 2, 3)); // 6",
+      "categoria": "Funciones Avanzadas"
+    },
+    {
+      "titulo": "Template Literals",
+      "concepto": "Los template literals permiten incrustar expresiones dentro de cadenas de texto usando el símbolo ${}.",
+      "ejemplo": "let nombre = 'Juan'; let saludo = `Hola, ${nombre}!`; console.log(saludo); // 'Hola, Juan!'",
+      "categoria": "Sintaxis"
+    },
+    {
+      "titulo": "Desestructuración de Arrays",
+      "concepto": "La desestructuración de arrays permite asignar valores de un array a variables de manera más eficiente.",
+      "ejemplo": "let numeros = [1, 2, 3]; let [a, b] = numeros; console.log(a, b); // 1, 2",
+      "categoria": "Sintaxis"
+    },
+    {
+      "titulo": "JSON.parse y JSON.stringify",
+      "concepto": "JSON.parse convierte una cadena JSON en un objeto JavaScript, mientras que JSON.stringify convierte un objeto JavaScript en una cadena JSON.",
+      "ejemplo": "let objeto = { nombre: 'Juan', edad: 30 }; let jsonString = JSON.stringify(objeto); console.log(jsonString); // '{\"nombre\":\"Juan\",\"edad\":30}'",
+      "categoria": "Funciones Útiles"
+    },
+    {
+      "titulo": "Set",
+      "concepto": "Un Set es una colección de valores únicos. Los valores repetidos no pueden ser añadidos a un Set.",
+      "ejemplo": "let conjunto = new Set([1, 2, 3, 3, 4]); console.log(conjunto); // Set {1, 2, 3, 4}",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "Map (Objeto)",
+      "concepto": "Un Map es una colección de pares clave-valor donde las claves pueden ser de cualquier tipo.",
+      "ejemplo": "let mapa = new Map(); mapa.set('nombre', 'Juan'); mapa.set('edad', 30); console.log(mapa.get('nombre')); // 'Juan'",
+      "categoria": "Estructuras de Datos"
+    },
+    {
+      "titulo": "SetTimeout",
+      "concepto": "El método 'setTimeout()' ejecuta una función después de un tiempo específico, en milisegundos.",
+      "ejemplo": "setTimeout(() => { console.log('Pasaron 3 segundos'); }, 3000);",
+      "categoria": "Funciones Asíncronas"
+    },
+    {
+      "titulo": "SetInterval",
+      "concepto": "El método 'setInterval()' ejecuta una función repetidamente con un intervalo de tiempo específico, en milisegundos.",
+      "ejemplo": "setInterval(() => { console.log('Mensaje cada 2 segundos'); }, 2000);",
+      "categoria": "Funciones Asíncronas"
+    },
+    {
+      "titulo": "Debounce",
+      "concepto": "El debounce es una técnica para limitar la frecuencia con la que se ejecutan ciertas funciones, especialmente en eventos como el desplazamiento o la escritura.",
+      "ejemplo": "let debounce = (func, tiempo) => { let timer; return function(...args) { clearTimeout(timer); timer = setTimeout(() => func(...args), tiempo); }; };",
+      "categoria": "Funciones Avanzadas"
+    },
+    {
+      "titulo": "Throttle",
+      "concepto": "El throttle es una técnica que garantiza que una función solo se ejecute una vez en un intervalo de tiempo especificado.",
+      "ejemplo": "let throttle = (func, tiempo) => { let last; return function(...args) { let ahora = new Date().getTime(); if (!last || ahora - last >= tiempo) { func(...args); last = ahora; } }; };",
+      "categoria": "Funciones Avanzadas"
+    },
+    {
+      "titulo": "Event Delegation",
+      "concepto": "La delegación de eventos es una técnica que permite gestionar eventos en elementos dinámicamente creados mediante el uso de un único manejador de eventos en un elemento contenedor.",
+      "ejemplo": "document.getElementById('miContenedor').addEventListener('click', function(e) { if (e.target && e.target.matches('button')) { console.log('Botón clickeado'); } });",
+      "categoria": "Interactividad"
+    },
+    {
+      "titulo": "LocalStorage",
+      "concepto": "LocalStorage es un almacenamiento persistente de datos que se mantiene incluso después de que se cierra el navegador.",
+      "ejemplo": "localStorage.setItem('nombre', 'Juan'); console.log(localStorage.getItem('nombre')); // 'Juan'",
+      "categoria": "Almacenamiento Web"
+    },
+    {
+      "titulo": "SessionStorage",
+      "concepto": "SessionStorage es similar a LocalStorage, pero los datos solo se mantienen durante la sesión de navegación.",
+      "ejemplo": "sessionStorage.setItem('nombre', 'Juan'); console.log(sessionStorage.getItem('nombre')); // 'Juan'",
+      "categoria": "Almacenamiento Web"
+    },
+    
+    {
+      "titulo": "FileReader",
+      "concepto": "La interfaz FileReader permite leer archivos del sistema de archivos local del usuario (como imágenes, documentos, etc.) de forma asíncrona.",
+      "ejemplo": "let reader = new FileReader(); reader.onload = function(e) { console.log(e.target.result); }; reader.readAsDataURL(file);",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "Blob",
+      "concepto": "Blob (Binary Large Object) es una representación de datos binarios que puede ser usado para manejar archivos de manera eficiente.",
+      "ejemplo": "let blob = new Blob([data], { type: 'image/png' }); let url = URL.createObjectURL(blob); console.log(url);",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "Canvas API",
+      "concepto": "La API de Canvas permite dibujar gráficos en una página web, y es útil para trabajar con imágenes de forma dinámica.",
+      "ejemplo": "let canvas = document.getElementById('myCanvas'); let ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0);",
+      "categoria": "Manipulación de Imágenes"
+    },
+    {
+      "titulo": "File Upload",
+      "concepto": "El input tipo 'file' permite al usuario seleccionar un archivo de su sistema para cargarlo.",
+      "ejemplo": "<input type='file' id='fileInput'>",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "IndexedDB",
+      "concepto": "IndexedDB es una base de datos orientada a objetos que permite almacenar grandes cantidades de datos en el navegador, es útil para aplicaciones que necesitan persistencia offline.",
+      "ejemplo": "let request = indexedDB.open('MiBaseDeDatos', 1); request.onsuccess = function(e) { console.log('Base de datos abierta'); };",
+      "categoria": "Bases de Datos Web"
+    },
+    {
+      "titulo": "Web Storage API (localStorage y sessionStorage)",
+      "concepto": "Web Storage API proporciona almacenamiento en el navegador, localStorage guarda datos de forma persistente, mientras que sessionStorage solo los guarda durante la sesión.",
+      "ejemplo": "localStorage.setItem('usuario', 'Juan'); console.log(localStorage.getItem('usuario')); // 'Juan'",
+      "categoria": "Almacenamiento Web"
+    },
+    {
+      "titulo": "Geolocalización",
+      "concepto": "La API de geolocalización permite obtener la ubicación del usuario en tiempo real.",
+      "ejemplo": "navigator.geolocation.getCurrentPosition(function(position) { console.log(position.coords.latitude, position.coords.longitude); });",
+      "categoria": "API Web"
+    },
+    {
+      "titulo": "Fetch API",
+      "concepto": "La Fetch API proporciona una forma sencilla de hacer solicitudes HTTP asíncronas para obtener recursos desde el servidor.",
+      "ejemplo": "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data));",
+      "categoria": "Red y APIs"
+    },
+    {
+      "titulo": "Service Workers",
+      "concepto": "Un Service Worker es un script que el navegador ejecuta en segundo plano, proporcionando funcionalidades como el cacheo de recursos y la sincronización en segundo plano.",
+      "ejemplo": "if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/sw.js'); }",
+      "categoria": "Red y APIs"
+    },
+    {
+      "titulo": "Canvas Image Data",
+      "concepto": "La API de ImageData te permite manipular directamente los píxeles de una imagen cargada en un canvas.",
+      "ejemplo": "let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height); let data = imageData.data;",
+      "categoria": "Manipulación de Imágenes"
+    },
+    {
+      "titulo": "FileSaver.js",
+      "concepto": "FileSaver.js es una librería que permite a los usuarios guardar archivos de manera local en su dispositivo desde una página web.",
+      "ejemplo": "saveAs(blob, 'archivo.txt');",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "URL.createObjectURL",
+      "concepto": "Este método genera una URL temporal que hace referencia a un archivo o blob en memoria.",
+      "ejemplo": "let blob = new Blob([data], { type: 'application/pdf' }); let url = URL.createObjectURL(blob); window.open(url);",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "Web Workers",
+      "concepto": "Los Web Workers permiten ejecutar código JavaScript en un hilo separado, fuera del hilo principal de la página web, mejorando el rendimiento.",
+      "ejemplo": "let worker = new Worker('worker.js'); worker.postMessage('Hola'); worker.onmessage = function(e) { console.log(e.data); };",
+      "categoria": "Desempeño y Hilos"
+    },
+    {
+      "titulo": "Cookies",
+      "concepto": "Las cookies permiten almacenar información en el navegador que puede ser recuperada por el servidor o por el cliente en futuras peticiones.",
+      "ejemplo": "document.cookie = 'usuario=Juan; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/';",
+      "categoria": "Almacenamiento Web"
+    },
+    {
+      "titulo": "IndexedDB - Transacciones",
+      "concepto": "Las transacciones en IndexedDB permiten realizar operaciones de lectura y escritura de manera atómica.",
+      "ejemplo": "let transaction = db.transaction(['usuarios'], 'readwrite'); let store = transaction.objectStore('usuarios'); store.add({ nombre: 'Juan' });",
+      "categoria": "Bases de Datos Web"
+    },
+   
+    {
+      "titulo": "File Upload API",
+      "concepto": "La API de UploadFile permite gestionar y subir archivos a un servidor a través de formularios en HTML.",
+      "ejemplo": "let form = document.querySelector('form'); form.addEventListener('submit', function(e) { let file = document.querySelector('input[type=\"file\"]').files[0]; });",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "Blob URL Revoke",
+      "concepto": "Después de usar un Blob URL generado con URL.createObjectURL, es importante revocar la URL para liberar los recursos.",
+      "ejemplo": "URL.revokeObjectURL(url);",
+      "categoria": "Manejo de Archivos"
+    },
+    {
+      "titulo": "File API",
+      "concepto": "La File API permite acceder y leer archivos locales seleccionados por el usuario, de manera que se puede manipular contenido de archivos directamente.",
+      "ejemplo": "let input = document.querySelector('input[type=file]'); input.addEventListener('change', function() { let file = input.files[0]; console.log(file.name); });",
+      "categoria": "Manejo de Archivos"
+    },
+    
+    {
+      "titulo": "history.pushState",
+      "concepto": "El método `pushState()` permite agregar una nueva entrada al historial del navegador sin recargar la página, lo que es útil para la navegación en aplicaciones de una sola página (SPA).",
+      "ejemplo": "history.pushState({page: 1}, 'Página 1', '?page=1');",
+      "categoria": "Navegación"
+    },
+    {
+      "titulo": "history.replaceState",
+      "concepto": "El método `replaceState()` permite reemplazar la entrada actual del historial del navegador, útil para actualizar la URL sin recargar la página.",
+      "ejemplo": "history.replaceState({page: 2}, 'Página 2', '?page=2');",
+      "categoria": "Navegación"
+    },
+    {
+      "titulo": "window.location",
+      "concepto": "El objeto `window.location` permite manipular la URL actual, navegar hacia otras páginas y obtener detalles de la URL, como el protocolo, dominio y parámetros.",
+      "ejemplo": "window.location.href = 'https://www.ejemplo.com';",
+      "categoria": "Navegación"
+    },
+    {
+      "titulo": "window.open",
+      "concepto": "El método `window.open()` abre una nueva ventana o pestaña en el navegador con una URL específica.",
+      "ejemplo": "window.open('https://www.ejemplo.com', '_blank');",
+      "categoria": "Navegación"
+    },
+    {
+      "titulo": "share API",
+      "concepto": "La API de Compartir permite a los usuarios compartir contenido (como enlaces, texto o imágenes) en aplicaciones de redes sociales o de mensajería desde el navegador.",
+      "ejemplo": "navigator.share({ title: 'Ejemplo', text: 'Texto de ejemplo', url: 'https://www.ejemplo.com' });",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Facebook SDK for JavaScript",
+      "concepto": "El SDK de Facebook para JavaScript permite integrar funcionalidades de Facebook como inicio de sesión, compartir contenido o interactuar con la API de Facebook.",
+      "ejemplo": "FB.init({ appId: 'tu-app-id', autoLogAppEvents: true, xfbml: true, version: 'v10.0' }); FB.login(function(response) { console.log(response); });",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Twitter API - Tweet Button",
+      "concepto": "Con la API de Twitter puedes integrar un botón de tweet o funcionalidad de compartir en Twitter directamente en tu sitio web.",
+      "ejemplo": "<a href='https://twitter.com/intent/tweet?text=Hola%20Mundo' target='_blank'>Tweet</a>",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "OAuth 2.0",
+      "concepto": "OAuth 2.0 es un protocolo de autorización que permite a las aplicaciones acceder a recursos de usuarios en otros servicios (como Google, Facebook, etc.) sin compartir contraseñas.",
+      "ejemplo": "const authUrl = 'https://accounts.google.com/o/oauth2/auth?client_id=...'; window.location.href = authUrl;",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Google API - Iniciar sesión",
+      "concepto": "Google ofrece una API de autenticación para permitir a los usuarios iniciar sesión con sus cuentas de Google en tu aplicación web.",
+      "ejemplo": "gapi.auth2.init({ client_id: 'tu-client-id' }).signIn().then(function(googleUser) { console.log(googleUser.getBasicProfile()); });",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Instagram API",
+      "concepto": "La API de Instagram permite acceder a datos públicos y gestionar interacciones, aunque requiere autenticación y permisos de usuario.",
+      "ejemplo": "https://api.instagram.com/v1/users/self/media/recent/?access_token=tu-token",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "navigator.geolocation",
+      "concepto": "La API de geolocalización permite acceder a la ubicación actual del usuario, muy útil para integrar funciones basadas en localización.",
+      "ejemplo": "navigator.geolocation.getCurrentPosition(function(position) { console.log(position.coords.latitude, position.coords.longitude); });",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Clipboard API",
+      "concepto": "La Clipboard API permite interactuar con el portapapeles del usuario para copiar y pegar contenido de manera programática.",
+      "ejemplo": "navigator.clipboard.writeText('Texto copiado').then(() => { console.log('Texto copiado al portapapeles'); });",
+      "categoria": "Redes Sociales"
+    },
+    {
+      "titulo": "Push Notifications",
+      "concepto": "Las notificaciones push permiten enviar mensajes a los usuarios incluso cuando no están activamente usando tu sitio web, utilizando Service Workers.",
+      "ejemplo": "Notification.requestPermission().then(function(permission) { if (permission === 'granted') { new Notification('¡Tienes un mensaje!'); } });",
+      "categoria": "Redes Sociales"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "funciones": [
+    {
+      "titulo": "JavaScript",
+      "concepto": "JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos, ampliamente utilizado para crear interactividad en páginas web. Es un lenguaje de scripting que se ejecuta en el navegador del usuario, permitiendo manipular el DOM, responder a eventos y realizar solicitudes asíncronas sin recargar la página.",
+      "ejemplo": "// JavaScript básico\nfunction mostrarMensaje() {\n  alert('¡Hola, mundo!');\n}\nmostrarMensaje(); // Muestra una alerta con el mensaje '¡Hola, mundo!'"
+    },
+    {
+      "titulo": "trim()",
+      "concepto": "El método `trim()` elimina los espacios en blanco al principio y al final de una cadena de texto. Es útil para limpiar entradas de usuario o normalizar datos.",
+      "ejemplo": "let cadena = '   Hola Mundo!   ';\nlet resultado = cadena.trim();\nconsole.log(resultado); // 'Hola Mundo!'"
+    },
+    {
+      "titulo": "trimStart() o trimLeft()",
+      "concepto": "El método `trimStart()` (o `trimLeft()`) elimina los espacios en blanco al principio de una cadena, dejando intactos los espacios al final. Es útil cuando solo se necesita limpiar el inicio de una cadena.",
+      "ejemplo": "let cadena = '   Hola Mundo!   ';\nlet resultado = cadena.trimStart();\nconsole.log(resultado); // 'Hola Mundo!   '"
+    },
+    {
+      "titulo": "trimEnd()",
+      "concepto": "El método `trimEnd()` elimina los espacios en blanco al final de una cadena, dejando intactos los espacios al principio. Es útil para limpiar el final de una cadena sin afectar el inicio.",
+      "ejemplo": "let cadena = '   Hola Mundo!   ';\nlet resultado = cadena.trimEnd();\nconsole.log(resultado); // '   Hola Mundo!'"
+    },
+    {
+      "titulo": "split()",
+      "concepto": "El método `split()` divide una cadena en un array de subcadenas utilizando un separador especificado. Es útil para procesar y manipular partes específicas de una cadena.",
+      "ejemplo": "let frase = 'Hola, cómo estás, hoy?';\nlet palabras = frase.split(', ');\nconsole.log(palabras); // ['Hola', 'cómo estás', 'hoy?']"
+    },
+    {
+      "titulo": "join()",
+      "concepto": "El método `join()` une todos los elementos de un array en una cadena, utilizando un separador opcional. Es útil para convertir arrays en cadenas legibles.",
+      "ejemplo": "const array = ['Manzana', 'Banana', 'Cereza'];\nconst cadena = array.join(', ');\nconsole.log(cadena); // 'Manzana, Banana, Cereza'"
+    },
+    {
+      "titulo": "concat()",
+      "concepto": "El método `concat()` combina dos o más arrays, creando un nuevo array sin modificar los originales. Es útil para fusionar datos de múltiples arrays.",
+      "ejemplo": "const array1 = [1, 2, 3];\nconst array2 = [4, 5, 6];\nconst newArray = array1.concat(array2);\nconsole.log(newArray); // [1, 2, 3, 4, 5, 6]"
+    },
+    {
+      "titulo": "slice()",
+      "concepto": "El método `slice()` devuelve una porción de un array o cadena, especificada por un índice inicial y otro final (no inclusivo). Es útil para extraer segmentos de datos.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst subArray = array.slice(1, 3);\nconsole.log(subArray); // [2, 3]"
+    },
+    {
+      "titulo": "indexOf() y lastIndexOf()",
+      "concepto": "Los métodos `indexOf()` y `lastIndexOf()` devuelven el índice de la primera/última aparición de un elemento en un array o cadena. Si no se encuentra, devuelven -1.",
+      "ejemplo": "const array = [1, 2, 3, 4, 3];\nconst firstIndex = array.indexOf(3); // 2\nconst lastIndex = array.lastIndexOf(3); // 4"
+    },
+    {
+      "titulo": "push() y pop()",
+      "concepto": "Los métodos `push()` y `pop()` añaden o eliminan elementos al final de un array. `push()` añade elementos, mientras que `pop()` elimina y devuelve el último elemento.",
+      "ejemplo": "const array = [1, 2, 3];\narray.push(4); // [1, 2, 3, 4]\nconst removedElement = array.pop(); // [1, 2, 3], removedElement = 4"
+    },
+    {
+      "titulo": "shift() y unshift()",
+      "concepto": "Los métodos `shift()` y `unshift()` añaden o eliminan elementos al inicio de un array. `unshift()` añade elementos, mientras que `shift()` elimina y devuelve el primer elemento.",
+      "ejemplo": "const array = [1, 2, 3];\narray.unshift(0); // [0, 1, 2, 3]\nconst removedElement = array.shift(); // [1, 2, 3], removedElement = 0"
+    },
+    {
+      "titulo": "reverse()",
+      "concepto": "El método `reverse()` invierte el orden de los elementos en un array. Es útil para invertir secuencias de datos.",
+      "ejemplo": "const array = [1, 2, 3];\nconst reversedArray = array.reverse();\nconsole.log(reversedArray); // [3, 2, 1]"
+    },
+    {
+      "titulo": "filter()",
+      "concepto": "El método `filter()` crea un nuevo array con todos los elementos que cumplen una condición especificada por una función. Es útil para filtrar datos.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst newArray = array.filter(element => element > 2);\nconsole.log(newArray); // [3, 4, 5]"
+    },
+    {
+      "titulo": "map()",
+      "concepto": "El método `map()` crea un nuevo array aplicando una función a cada elemento del array original. Es útil para transformar datos.",
+      "ejemplo": "const array = [1, 2, 3];\nconst newArray = array.map(element => element * 2);\nconsole.log(newArray); // [2, 4, 6]"
+    },
+    {
+      "titulo": "forEach()",
+      "concepto": "El método `forEach()` ejecuta una función proporcionada una vez para cada elemento del array. Es útil para iterar sobre arrays sin crear uno nuevo.",
+      "ejemplo": "const array = [1, 2, 3];\narray.forEach(element => console.log(element)); // Imprime 1, 2, 3"
+    },
+    {
+      "titulo": "every() y some()",
+      "concepto": "Los métodos `every()` y `some()` verifican si todos o algunos elementos del array cumplen una condición. `every()` devuelve `true` si todos cumplen, mientras que `some()` devuelve `true` si al menos uno cumple.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst todosMayoresQueCero = array.every(element => element > 0); // true\nconst algunosMayoresQueTres = array.some(element => element > 3); // true"
+    },
+    {
+      "titulo": "reduce()",
+      "concepto": "El método `reduce()` aplica una función acumuladora a cada elemento del array, reduciéndolo a un solo valor. Es útil para sumar, multiplicar o acumular valores.",
+      "ejemplo": "const array = [1, 2, 3, 4];\nconst suma = array.reduce((acumulador, elemento) => acumulador + elemento, 0);\nconsole.log(suma); // 10"
+    },
+    {
+      "titulo": "find()",
+      "concepto": "El método `find()` devuelve el primer elemento que cumple una condición especificada por una función. Si no se encuentra, devuelve `undefined`.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst encontrado = array.find(elemento => elemento > 2);\nconsole.log(encontrado); // 3"
+    },
+    {
+      "titulo": "findIndex()",
+      "concepto": "El método `findIndex()` devuelve el índice del primer elemento que cumple una condición especificada por una función. Si no se encuentra, devuelve -1.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst indice = array.findIndex(elemento => elemento > 2);\nconsole.log(indice); // 2"
+    },
+    {
+      "titulo": "includes()",
+      "concepto": "El método `includes()` determina si un array o cadena incluye un elemento específico, devolviendo `true` o `false`. Es útil para verificar la existencia de un valor.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\nconst incluyeTres = array.includes(3);\nconsole.log(incluyeTres); // true"
+    },
+    {
+      "titulo": "flat()",
+      "concepto": "El método `flat()` crea un nuevo array con todos los subarrays concatenados en un solo nivel. Es útil para aplanar arrays anidados.",
+      "ejemplo": "const array = [1, [2, 3], [4, 5]];\nconst newArray = array.flat();\nconsole.log(newArray); // [1, 2, 3, 4, 5]"
+    },
+    {
+      "titulo": "splice()",
+      "concepto": "El método `splice()` cambia el contenido de un array eliminando, reemplazando o añadiendo elementos en una posición específica. Es útil para modificar arrays dinámicamente.",
+      "ejemplo": "const array = [1, 2, 3, 4, 5];\narray.splice(2, 1, 'nuevo');\nconsole.log(array); // [1, 2, 'nuevo', 4, 5]"
+    },
+    {
+      "titulo": "replace()",
+      "concepto": "El método `replace()` busca una cadena o patrón en una cadena y lo reemplaza con otra cadena. Es útil para modificar texto dinámicamente.",
+      "ejemplo": "const frase = 'Hola, mundo!';\nconst nuevaFrase = frase.replace('mundo', 'amigo');\nconsole.log(nuevaFrase); // 'Hola, amigo!'"
+    },
+    {
+      "titulo": "sort()",
+      "concepto": "El método `sort()` ordena los elementos de un array en su lugar y devuelve el array ordenado. Puede recibir una función de comparación para ordenar de manera personalizada.",
+      "ejemplo": "const array = [3, 1, 4, 1, 5, 9];\narray.sort((a, b) => a - b);\nconsole.log(array); // [1, 1, 3, 4, 5, 9]"
+    },
+    {
+      "titulo": "substring()",
+      "concepto": "El método `substring()` extrae una porción de una cadena entre dos índices y devuelve la subcadena. Es útil para truncar o extraer partes de una cadena.",
+      "ejemplo": "let cadena = 'Esta es una cadena larga';\nlet subcadena = cadena.substring(0, 10);\nconsole.log(subcadena); // 'Esta es u'"
+    },
+    {
+      "titulo": "null",
+      "concepto": "`null` es un valor especial en JavaScript que representa la ausencia intencional de cualquier valor. Se utiliza para indicar que una variable no tiene valor asignado.",
+      "ejemplo": "let variable = null;\nconsole.log(variable); // null"
+    },
+    {
+      "titulo": "toString()",
+      "concepto": "El método `toString()` convierte un valor en una cadena de texto. Es útil para convertir números, booleanos, arrays u objetos en una representación de cadena.",
+      "ejemplo": "const numero = 42;\nconst cadena = numero.toString();\nconsole.log(cadena); // '42'"
+  },
+    {
+      "titulo": "toFixed()",
+      "concepto": "El método `toFixed()` formatea un número con un número específico de decimales y lo devuelve como una cadena. Es útil para mostrar números con una precisión determinada.",
+      "ejemplo": "const numero = 3.14159;\nconst redondeado = numero.toFixed(2);\nconsole.log(redondeado); // '3.14'"
+  },
+    {
+      "titulo": "parseInt() y parseFloat()",
+      "concepto": "Las funciones `parseInt()` y `parseFloat()` convierten una cadena en un número entero o decimal, respectivamente. Son útiles para convertir cadenas que representan números en valores numéricos.",
+      "ejemplo": "const cadenaEntero = '42';\nconst entero = parseInt(cadenaEntero);\nconsole.log(entero); // 42\n\nconst cadenaDecimal = '3.14';\nconst decimal = parseFloat(cadenaDecimal);\nconsole.log(decimal); // 3.14"
+  },
+    {
+      "titulo": "isNaN()",
+      "concepto": "La función `isNaN()` verifica si un valor es `NaN` (Not-a-Number). Es útil para comprobar si una operación numérica resultó en un valor no válido.",
+      "ejemplo": "const resultado = 0 / 0;\nconsole.log(isNaN(resultado)); // true"
+  },
+    {
+      "titulo": "isFinite()",
+      "concepto": "La función `isFinite()` verifica si un valor es un número finito. Es útil para detectar valores infinitos o no numéricos.",
+      "ejemplo": "console.log(isFinite(42)); // true\nconsole.log(isFinite(Infinity)); // false"
+  },
+    {
+      "titulo": "Math.random()",
+      "concepto": "La función `Math.random()` genera un número pseudoaleatorio entre 0 (inclusive) y 1 (exclusivo). Es útil para generar valores aleatorios.",
+      "ejemplo": "const aleatorio = Math.random();\nconsole.log(aleatorio); // Un número entre 0 y 1"
+  },
+    {
+      "titulo": "Math.floor()",
+      "concepto": "La función `Math.floor()` redondea un número hacia abajo al entero más cercano. Es útil para obtener valores enteros a partir de números decimales.",
+      "ejemplo": "const numero = 3.7;\nconst redondeado = Math.floor(numero);\nconsole.log(redondeado); // 3"
+  },
+    {
+      "titulo": "Math.ceil()",
+      "concepto": "La función `Math.ceil()` redondea un número hacia arriba al entero más cercano. Es útil cuando necesitas asegurarte de que un número no sea menor que un valor específico.",
+      "ejemplo": "const numero = 3.2;\nconst redondeado = Math.ceil(numero);\nconsole.log(redondeado); // 4"
+  },
+    {
+      "titulo": "Math.round()",
+      "concepto": "La función `Math.round()` redondea un número al entero más cercano. Es útil para redondear valores decimales de manera estándar.",
+      "ejemplo": "const numero = 3.5;\nconst redondeado = Math.round(numero);\nconsole.log(redondeado); // 4"
+  },
+    {
+      "titulo": "Math.max() y Math.min()",
+      "concepto": "Las funciones `Math.max()` y `Math.min()` devuelven el número más grande o más pequeño de una lista de valores, respectivamente. Son útiles para encontrar valores extremos.",
+      "ejemplo": "const maximo = Math.max(1, 2, 3, 4, 5);\nconsole.log(maximo); // 5\n\nconst minimo = Math.min(1, 2, 3, 4, 5);\nconsole.log(minimo); // 1"
+  },
+    {
+      "titulo": "Date()",
+      "concepto": "El objeto `Date` se utiliza para trabajar con fechas y horas en JavaScript. Puedes crear una fecha actual o específica y manipularla según sea necesario.",
+      "ejemplo": "const fecha = new Date();\nconsole.log(fecha); // Muestra la fecha y hora actual"
+  },
+    {
+      "titulo": "toLocaleString()",
+      "concepto": "El método `toLocaleString()` convierte una fecha, número o array en una cadena con formato localizado. Es útil para mostrar datos en un formato específico según la región del usuario.",
+      "ejemplo": "const fecha = new Date();\nconst fechaLocal = fecha.toLocaleString('es-ES');\nconsole.log(fechaLocal); // '20/10/2023, 12:34:56'"
+  },
+    {
+      "titulo": "JSON.stringify()",
+      "concepto": "La función `JSON.stringify()` convierte un objeto o valor de JavaScript en una cadena JSON. Es útil para enviar datos a un servidor o almacenarlos.",
+      "ejemplo": "const objeto = { nombre: 'Juan', edad: 30 };\nconst json = JSON.stringify(objeto);\nconsole.log(json); // '{\"nombre\":\"Juan\",\"edad\":30}'"
+  },
+    {
+      "titulo": "JSON.parse()",
+      "concepto": "La función `JSON.parse()` convierte una cadena JSON en un objeto o valor de JavaScript. Es útil para trabajar con datos recibidos de un servidor.",
+      "ejemplo": "const json = '{\"nombre\":\"Juan\",\"edad\":30}';\nconst objeto = JSON.parse(json);\nconsole.log(objeto); // { nombre: 'Juan', edad: 30 }"
+  },
+    {
+      "titulo": "Promise",
+      "concepto": "Una `Promise` (promesa) es un objeto que representa la eventual finalización (o falla) de una operación asíncrona. Es útil para manejar operaciones que toman tiempo, como solicitudes de red.",
+      "ejemplo": "const promesa = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('Éxito'), 1000);\n});\npromesa.then(resultado => console.log(resultado)); // 'Éxito' después de 1 segundo"
+  },
+    {
+      "titulo": "async/await",
+      "concepto": "Las palabras clave `async` y `await` permiten trabajar con promesas de manera más sencilla y legible. `async` declara una función asíncrona, y `await` pausa la ejecución hasta que la promesa se resuelva.",
+      "ejemplo": "async function obtenerDatos() {\n  const respuesta = await fetch('https://api.ejemplo.com/datos');\n  const datos = await respuesta.json();\n  console.log(datos);\n}"
+  },
+    {
+      "titulo": "fetch()",
+      "concepto": "La función `fetch()` se utiliza para realizar solicitudes HTTP y obtener recursos de una red. Devuelve una promesa que resuelve en la respuesta de la solicitud.",
+      "ejemplo": "fetch('https://api.ejemplo.com/datos')\n  .then(respuesta => respuesta.json())\n  .then(datos => console.log(datos));"
+  },
+    {
+      "titulo": "Set",
+      "concepto": "Un `Set` es una colección de valores únicos, lo que significa que no puede contener duplicados. Es útil para almacenar listas de elementos sin repetir.",
+      "ejemplo": "const miSet = new Set([1, 2, 3, 3, 4]);\nconsole.log(miSet); // Set { 1, 2, 3, 4 }"
+  },
+    {
+      "titulo": "Map",
+      "concepto": "Un `Map` es una colección de pares clave-valor donde las claves pueden ser de cualquier tipo. Es útil para almacenar datos asociativos de manera más flexible que un objeto.",
+      "ejemplo": "const miMap = new Map();\nmiMap.set('nombre', 'Juan');\nmiMap.set('edad', 30);\nconsole.log(miMap.get('nombre')); // 'Juan'"
+  },
+  {
+    "titulo": "charAt()",
+    "concepto": "El método `charAt()` devuelve el carácter en una posición específica de una cadena. Es útil para acceder a caracteres individuales en una cadena.",
+    "ejemplo": "const cadena = 'Hola';\nconst caracter = cadena.charAt(1);\nconsole.log(caracter); // 'o'"
+  },
+  {
+    "titulo": "charCodeAt()",
+    "concepto": "El método `charCodeAt()` devuelve el valor Unicode del carácter en una posición específica de una cadena. Es útil para trabajar con caracteres especiales o codificaciones.",
+    "ejemplo": "const cadena = 'Hola';\nconst codigo = cadena.charCodeAt(1);\nconsole.log(codigo); // 111 (código Unicode de 'o')"
+  },
+  {
+    "titulo": "startsWith()",
+    "concepto": "El método `startsWith()` verifica si una cadena comienza con los caracteres de otra cadena. Es útil para validar prefijos.",
+    "ejemplo": "const cadena = 'Hola Mundo';\nconst comienzaConHola = cadena.startsWith('Hola');\nconsole.log(comienzaConHola); // true"
+  },
+  {
+    "titulo": "endsWith()",
+    "concepto": "El método `endsWith()` verifica si una cadena termina con los caracteres de otra cadena. Es útil para validar sufijos.",
+    "ejemplo": "const cadena = 'Hola Mundo';\nconst terminaConMundo = cadena.endsWith('Mundo');\nconsole.log(terminaConMundo); // true"
+  },
+  {
+    "titulo": "repeat()",
+    "concepto": "El método `repeat()` devuelve una nueva cadena que contiene el número especificado de copias de la cadena original. Es útil para generar patrones o repeticiones.",
+    "ejemplo": "const cadena = 'Hola ';\nconst repetida = cadena.repeat(3);\nconsole.log(repetida); // 'Hola Hola Hola '"
+  },
+  {
+    "titulo": "padStart()",
+    "concepto": "El método `padStart()` rellena una cadena con caracteres al inicio hasta alcanzar una longitud específica. Es útil para formatear cadenas.",
+    "ejemplo": "const cadena = '5';\nconst rellenada = cadena.padStart(3, '0');\nconsole.log(rellenada); // '005'"
+  },
+  {
+    "titulo": "padEnd()",
+    "concepto": "El método `padEnd()` rellena una cadena con caracteres al final hasta alcanzar una longitud específica. Es útil para formatear cadenas.",
+    "ejemplo": "const cadena = '5';\nconst rellenada = cadena.padEnd(3, '0');\nconsole.log(rellenada); // '500'"
+  },
+  {
+    "titulo": "toUpperCase()",
+    "concepto": "El método `toUpperCase()` convierte una cadena a mayúsculas. Es útil para normalizar texto.",
+    "ejemplo": "const cadena = 'Hola Mundo';\nconst mayusculas = cadena.toUpperCase();\nconsole.log(mayusculas); // 'HOLA MUNDO'"
+  },
+  {
+    "titulo": "toLowerCase()",
+    "concepto": "El método `toLowerCase()` convierte una cadena a minúsculas. Es útil para normalizar texto.",
+    "ejemplo": "const cadena = 'Hola Mundo';\nconst minusculas = cadena.toLowerCase();\nconsole.log(minusculas); // 'hola mundo'"
+  },
+  {
+    "titulo": "Array.isArray()",
+    "concepto": "La función `Array.isArray()` verifica si un valor es un array. Es útil para validar tipos de datos antes de realizar operaciones específicas de arrays.",
+    "ejemplo": "const array = [1, 2, 3];\nconst esArray = Array.isArray(array);\nconsole.log(esArray); // true"
+  },
+  {
+    "titulo": "Array.from()",
+    "concepto": "El método `Array.from()` crea un nuevo array a partir de un objeto iterable (como una cadena o un conjunto). Es útil para convertir estructuras de datos en arrays.",
+    "ejemplo": "const cadena = 'Hola';\nconst array = Array.from(cadena);\nconsole.log(array); // ['H', 'o', 'l', 'a']"
+  },
+  {
+    "titulo": "Array.of()",
+    "concepto": "El método `Array.of()` crea un nuevo array con los argumentos proporcionados. Es útil para crear arrays con valores específicos.",
+    "ejemplo": "const array = Array.of(1, 2, 3);\nconsole.log(array); // [1, 2, 3]"
+  },
+  {
+    "titulo": "Object.keys()",
+    "concepto": "El método `Object.keys()` devuelve un array con las claves enumerables de un objeto. Es útil para iterar sobre las propiedades de un objeto.",
+    "ejemplo": "const objeto = { nombre: 'Juan', edad: 30 };\nconst claves = Object.keys(objeto);\nconsole.log(claves); // ['nombre', 'edad']"
+  },
+  {
+    "titulo": "Object.values()",
+    "concepto": "El método `Object.values()` devuelve un array con los valores enumerables de un objeto. Es útil para obtener los valores de un objeto sin las claves.",
+    "ejemplo": "const objeto = { nombre: 'Juan', edad: 30 };\nconst valores = Object.values(objeto);\nconsole.log(valores); // ['Juan', 30]"
+  },
+  {
+    "titulo": "Object.entries()",
+    "concepto": "El método `Object.entries()` devuelve un array de pares clave-valor enumerables de un objeto. Es útil para convertir objetos en arrays iterables.",
+    "ejemplo": "const objeto = { nombre: 'Juan', edad: 30 };\nconst entradas = Object.entries(objeto);\nconsole.log(entradas); // [['nombre', 'Juan'], ['edad', 30]]"
+  },
+  {
+    "titulo": "Object.assign()",
+    "concepto": "El método `Object.assign()` copia las propiedades de uno o más objetos fuente a un objeto destino. Es útil para combinar objetos o clonarlos.",
+    "ejemplo": "const objeto1 = { a: 1 };\nconst objeto2 = { b: 2 };\nconst combinado = Object.assign({}, objeto1, objeto2);\nconsole.log(combinado); // { a: 1, b: 2 }"
+  },
+  {
+    "titulo": "Object.freeze()",
+    "concepto": "El método `Object.freeze()` congela un objeto, impidiendo que se puedan añadir, eliminar o modificar sus propiedades. Es útil para crear objetos inmutables.",
+    "ejemplo": "const objeto = { nombre: 'Juan' };\nObject.freeze(objeto);\nobjeto.nombre = 'Pedro'; // No tiene efecto\nconsole.log(objeto.nombre); // 'Juan'"
+  },
+  {
+    "titulo": "Object.seal()",
+    "concepto": "El método `Object.seal()` sella un objeto, impidiendo que se añadan o eliminen propiedades, pero permitiendo modificar las existentes. Es útil para restringir cambios en objetos.",
+    "ejemplo": "const objeto = { nombre: 'Juan' };\nObject.seal(objeto);\nobjeto.nombre = 'Pedro'; // Permitido\nobjeto.edad = 30; // No tiene efecto\nconsole.log(objeto); // { nombre: 'Pedro' }"
+  }
+]
+}

@@ -1,0 +1,19 @@
+// Crea una instancia de XMLHttpRequest
+const xhr = new XMLHttpRequest();
+// Configura la solicitud
+xhr.open('GET', ruta, true);
+// Define qué hacer cuando la solicitud esté completa
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    const contenido = xhr.responseText;
+
+  //  console.log(contenido); // Muestra el contenido del archivo en la consola
+  }
+  else {
+    console.error('Error al cargar el archivo.');
+  }
+};
+// Envía la solicitud
+xhr.send();
+
+//======
